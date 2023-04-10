@@ -20,7 +20,8 @@ const {
     colors,
     fontSizes,
     radii: {
-      default: '4px'
+      default: '8px',
+      lg: '16px'
     }
   },
   media: breakpoints

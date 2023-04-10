@@ -1,1 +1,6 @@
 export * from './typography'
+export * from './icon'
+export * from './box'
+export * from './button'
+export * from './container'
+export * from './input'

@@ -1,11 +1,12 @@
 export const colors = {
-  background: '#000000',
-  foreground: '#111111',
+  background: '#FFFFFF',
+  foreground: '#F6F6F6',
   primary: '#DDFE71',
   primaryLight: '#E9FFA1',
   primaryLighter: '#F8FFE1',
   secondary: '#D3E4E5',
-  heading: '#EDEDED',
-  highlight: '#7E7E7E',
+  heading: '#3D3F43',
+  TEXT: '#B0B0B2',
+  highlight: '#B0B0B2',
   error: '#E21818',
 }
