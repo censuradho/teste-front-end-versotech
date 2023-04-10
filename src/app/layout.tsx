@@ -1,4 +1,4 @@
-import './globals.css'
+import { getCssText, globalStyle } from '../../stitches.config'
 
 export const metadata = {
   title: 'Create Next App',
@@ -10,8 +10,16 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  globalStyle()
+  
   return (
     <html lang="en">
+      <head>
+        <style 
+          id="stitches"
+          dangerouslySetInnerHTML={{ __html: getCssText() }}
+        />
+      </head>
       <body>{children}</body>
     </html>
   )
