@@ -38,7 +38,7 @@ export function Pagination (props: PaginationProps) {
 
   return (
     <Styles.Container>
-      <Typography size="xsm">{`${currentPage} de ${_totalPages}`}</Typography>
+      <Typography size="xsm">{`${page} de ${_totalPages}`}</Typography>
       <Box gap={0.3}>
         <Styles.Bullet disabled={currentPage <= 2} active onClick={() => handlePageChange(-2)}>
           {backward2x}
