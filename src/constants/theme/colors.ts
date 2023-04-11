@@ -1,7 +1,7 @@
 export const colors = {
   primary: '#635fc7',
   primaryLight: '#a8a4ff',
-  primaryLighter: '#fff',
+  primaryLighter: 'rgba(99,95,199,.1)',
   background: '#131720',
   foreground: '#0c0e14',
   heading: '#fff',

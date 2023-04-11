@@ -24,7 +24,7 @@ export function Card (props: CardProps) {
           {data?.name}
         </Typography>
         <Image 
-          src={data?.sprites?.front_default}  
+          src={data?.sprites?.other?.dream_world?.front_default}  
           alt="sprit" 
           width={96} 
           height={95} 

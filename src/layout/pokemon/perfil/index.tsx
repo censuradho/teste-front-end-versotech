@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { useRouter } from 'next/router'
 import * as Styles from './styles'
 import { PokemonPerfilProps } from './types'
+import { Info, Skills } from './components'
 
 export function PokemonPerfilLayout (props: PokemonPerfilProps) {
   const {
@@ -24,7 +25,6 @@ export function PokemonPerfilLayout (props: PokemonPerfilProps) {
 
   return (
     <Styles.Container>
-
       <Styles.Hero>
         <Box gap={1} alignItems="center">
           <ButtonIcon 
@@ -38,24 +38,31 @@ export function PokemonPerfilLayout (props: PokemonPerfilProps) {
             color="heading"
           >{data.name}</Typography>
         </Box>
-        <Image src={data?.sprites.front_default} width={200} height={200} style={{ objectFit: 'contain' }} alt="sprit" />
+        <Image 
+          src={data?.sprites?.other?.dream_world?.front_default} 
+          width={200} 
+          height={200} 
+          style={{ objectFit: 'contain' }} 
+          alt="sprit" 
+        />
         <Box gap={0.5} marginTop={1}>
           {renderTypes}
         </Box>
       </Styles.Hero>
       <Styles.Main>
         <Container>
-          <Styles.Content>
-            <Box gap={3} justifyContent="space-between">
-              <Typography as="strong">Height</Typography>
-              <Typography color="heading">{data.height}</Typography>
-            </Box>
-            <Box gap={3} justifyContent="space-between">
-              <Typography as="strong">Weight</Typography>
-              <Typography color="heading">{data.weight}</Typography>
-            </Box>
-            {renderStats}
-          </Styles.Content>
+          <Styles.TabsRoot defaultValue="info">
+            <Styles.TabsList>
+              <Styles.TabsTrigger value="info">Info</Styles.TabsTrigger>
+              <Styles.TabsTrigger value="skills">Skills</Styles.TabsTrigger>
+            </Styles.TabsList>
+            <Styles.TabsContent value="info">
+              <Info data={data} />
+            </Styles.TabsContent>
+            <Styles.TabsContent value="skills">
+              <Skills data={data} />
+            </Styles.TabsContent>
+          </Styles.TabsRoot>
         </Container>
       </Styles.Main>
     </Styles.Container>

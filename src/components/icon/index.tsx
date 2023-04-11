@@ -1,5 +1,4 @@
 import { icons } from "./icons";
-import { theme } from "stitches.config";
 import { IconProps } from "./types";
 import { Typography } from "../typography";
 

@@ -1,6 +1,6 @@
 import { Box, Container, Input, Pagination, Select, Typography } from '@/components'
 import { useDebounceCallback } from '@/hooks/useDebounceCallback'
-import { Card } from './components'
+import { Card, ListLoader } from './components'
 import { usePokemon } from './hooks/usePokemon'
 import * as Styles from './styles'
 import { PokemonPageProps } from './types'
@@ -23,7 +23,7 @@ export function PokemonLayout (props: PokemonPageProps) {
 
   const [querySearch, setSearch] = useState(String(search || ''))
 
-  const renderItems = pokemons?.results?.map(value => (
+  const renderItems = pokemons?.results?.map(value => !isLoading && (
     <li key={value.id}>
       <Card 
         data={value}
@@ -88,6 +88,7 @@ export function PokemonLayout (props: PokemonPageProps) {
           />
         </Styles.Form>
         <Box flexDirection="column" gap={1} marginTop={2}>
+          <ListLoader loading={isLoading} />
           <Styles.List>{renderItems}</Styles.List>
           {renderItems?.length === 0 && (
             <Box 

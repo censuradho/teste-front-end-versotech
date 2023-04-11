@@ -14,7 +14,6 @@ export const List = styled('ul', {
 
   '@table-min': {
     gridTemplateColumns: 'repeat(3, 1fr)',
-
   }
 })
 
