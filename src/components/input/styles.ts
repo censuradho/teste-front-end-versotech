@@ -28,7 +28,7 @@ export const Input = styled("input", {
 
   "&::placeholder": {
     color: "$highlight",
-    fontSize: "0.8rem",
+    fontSize: "$xsm",
     fontWeight: "400",
   },
   

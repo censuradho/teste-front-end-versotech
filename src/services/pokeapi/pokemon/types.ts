@@ -45,4 +45,7 @@ export interface PokemonFindManyResponse<T> {
 
 export interface PokemonFindManyQuery {
   limit?: number
+  page?: number
+  total?: number
+  search?: string
 }

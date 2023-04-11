@@ -5,12 +5,10 @@ import { Typography } from "../typography";
 
 export function Icon(props: IconProps) {
   const {
-    name, color, customColor, size = 20,
+    name, color, size = 20,
   } = props;
 
   const Svg = icons[name];
-
-  const fill = ((customColor || theme.colors[color as keyof typeof theme.colors]?.value)) as string;
 
   if (!Svg) return null
   

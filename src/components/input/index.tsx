@@ -21,6 +21,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>((props, ref) => {
     loading,
     ...otherProps
   } = props;
+
   const hasError = !!errorMessage;
 
   const renderLabel = () => {
@@ -57,6 +58,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>((props, ref) => {
 
     return (
       <Styles.LeftIconView>
+        <Icon {...leftIcon} />
       </Styles.LeftIconView>
     );
   };

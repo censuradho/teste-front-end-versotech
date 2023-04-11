@@ -8,14 +8,8 @@ export const Container = styled('div', {
   flexDirection: 'column',
   gap: '1rem',
   justifyContent: 'center',
-  alignItems: 'center'
-})
-
-export const Figure = styled('figure', {
-  width: '5rem',
-  height: '5rem',
-  objectFit: 'contain',
-  position: 'relative'
+  alignItems: 'center',
+  border: '1px solid $border'
 })
 
 export const Type = styled('strong', {
@@ -23,5 +17,6 @@ export const Type = styled('strong', {
   fontSize: '$xsm',
   background: '$primaryLight',
   padding: '0.5rem',
-  borderRadius: '$default'
+  borderRadius: '$default',
+  color: '#fff'
 })

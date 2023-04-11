@@ -13,9 +13,17 @@ function findById (id: string) {
 
 
 async function findMany (params?: PokemonFindManyQuery): Promise<PokemonFindManyResponse<Pokemon>> {
+  const {
+    limit = 12,
+    page = 1,
+  } = params || {}
+
+  const offset = limit * (page - 1)
+
   const { data } = await pokeApi.get<PokemonFindManyResponse<{ url: string }>>(`/pokemon`, {
     params: {
-      limit: params?.limit || 12
+      limit,
+      offset
     }
   })
 
@@ -25,13 +33,13 @@ async function findMany (params?: PokemonFindManyQuery): Promise<PokemonFindMany
     endpoints.map(endpoint => findById(getIdFromUrl(endpoint)))
   )
 
-    return {
-      ...data,
-      results: allResults.map(value => value.data)
-    }
+  return {
+    ...data,
+    results: allResults.map(value => value.data)
   }
+}
 
- export const pokemonService = {
+export const pokemonService = {
   findMany,
   findById
 }

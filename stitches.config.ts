@@ -68,6 +68,7 @@ const globalStyle = GlobalCss({
   h1: {
     fontWeight: '500',
     fontFamily: '$title',
+    lineHeight: 'auto'
   },
   h2: {
     fontFamily: '$title',
@@ -77,7 +78,7 @@ const globalStyle = GlobalCss({
     fontFamily: '$text',
     lineHeight: '1.2rem'
   },
-  'span': {
+  'span, strong': {
     color: '$text'
   },
   hr: {
