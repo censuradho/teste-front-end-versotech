@@ -41,9 +41,9 @@ export function usePokemon (params?: Params) {
     try {
       setIsLoading(true)
 
-      const { search } = params || {}
+      const { search, page = 0, limit = 0 } = params || {}
   
-      if (_page >= _limit || _page <= 0) return;
+      if (page >= limit || page <= 0) return;
   
       const response = await pokemonService.findMany({
         limit: _limit,
@@ -116,6 +116,7 @@ export function usePokemon (params?: Params) {
     getPokemons({
       limit: _limit,
       search: _search,
+      page: _page,
     })
   }, [_limit, query])
 
