@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Box } from '../box'
 import { Icon } from '../icon';
 import { Typography } from '../typography';
@@ -32,14 +32,18 @@ export function Pagination (props: PaginationProps) {
     onPageChange(value)
   }, 500)
 
+  useEffect(() => {
+    setPage(prevState => currentPage === prevState ? prevState : currentPage)
+  }, [currentPage])
+
   return (
     <Styles.Container>
       <Typography size="xsm">{`${currentPage} de ${_totalPages}`}</Typography>
       <Box gap={0.3}>
-        <Styles.Bullet disabled={currentPage <= 1} active onClick={() => handlePageChange(-2)}>
+        <Styles.Bullet disabled={currentPage <= 2} active onClick={() => handlePageChange(-2)}>
           {backward2x}
         </Styles.Bullet>
-        <Styles.Bullet disabled={currentPage <= 2} onClick={() => handlePageChange(-1)}>
+        <Styles.Bullet disabled={currentPage <= 1} onClick={() => handlePageChange(-1)}>
           {backward}
         </Styles.Bullet>
         <Styles.CurrentPageInput

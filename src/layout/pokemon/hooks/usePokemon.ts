@@ -110,6 +110,10 @@ export function usePokemon (params?: Params) {
     })
   }
 
+  const handleResetFilters = () => {
+    router.push(router.pathname)
+  }
+
   useEffect(() => {
     if (!query) return
 
@@ -134,6 +138,7 @@ export function usePokemon (params?: Params) {
     onChangeLimit: handleChangeLimit,
     onPageChange: handlePageChange,
     onSearch: handleSearch,
+    onResetFilters: handleResetFilters,
     query: {
       search,
       page: _page,

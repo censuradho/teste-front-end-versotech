@@ -15,6 +15,7 @@ export function PokemonLayout (props: PokemonPageProps) {
     isLoading,
     onPageChange,
     onSearch,
+    onResetFilters
   } = usePokemon({
     defaultValue: props.data
   })
@@ -52,11 +53,13 @@ export function PokemonLayout (props: PokemonPageProps) {
     <Styles.Container>
       <Container>
         <Box fullWidth justifyContent="space-between" alignItems="flexStart">
-          <Typography
-            as="h1"
-            size="xlg"
-            color="heading"
-          >Pokedex</Typography>
+          <button onClick={onResetFilters}>
+            <Typography
+              as="h1"
+              size="xlg"
+              color="heading"
+            >Pokedex</Typography>
+          </button>
           <Select
             defaultValue={String(limit || 12)}
             onValueChange={onChangeLimit}
