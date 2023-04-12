@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
-import { Box } from '../box'
-import { Icon } from '../icon';
-import { Typography } from '../typography';
-import * as Styles from './styles'
-import { PaginationProps } from './types'
+
 import { useDebounceCallback } from '@/hooks/useDebounceCallback';
+import { Box, Typography } from '@/components';
+
+import * as Styles from './styles';
+import { PaginationProps } from './types';
 
 export function Pagination (props: PaginationProps) {
   const {

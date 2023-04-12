@@ -50,7 +50,8 @@ export function usePokemon (params?: Params) {
         page: _page,
         ...params
       })
-      dispatch(setPokemons(response))
+      
+      if (!search) dispatch(setPokemons(response))
   
   
       if (search) {
@@ -129,6 +130,10 @@ export function usePokemon (params?: Params) {
       dispatch(setPokemons(params?.defaultValue))
     }
   }, [])
+
+  useEffect(() => {
+    console.log(isLoading)
+  }, [isLoading])
 
   return {
     ...pokemon,

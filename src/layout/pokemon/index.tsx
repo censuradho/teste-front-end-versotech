@@ -46,7 +46,6 @@ export function PokemonLayout (props: PokemonPageProps) {
     event.preventDefault()
 
     getPokemonsCallback(querySearch)
-
   }
 
   return (
