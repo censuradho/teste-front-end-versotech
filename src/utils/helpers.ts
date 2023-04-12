@@ -1,12 +1,5 @@
 import { StandardLonghandProperties } from '@stitches/react/types/css'
 
-export function toLocaleString (value: number) {
-  return value.toLocaleString('pt-BR', {
-    currency: 'BRL',
-    style: 'currency'
-  })
-} 
-
 export function parseToVariant <T> (obj: Record<string | number, string>, property: keyof StandardLonghandProperties) {
   return Object
     .entries(obj)
@@ -39,35 +32,4 @@ export const resolvePath = (path: string, obj: Record<string, any>) => {
   Object.keys(obj).map(key => (tempPath = tempPath.replace(`:${key}`, obj[key])))
 
   return tempPath
-}
-
-export const jsonToDownload = async (data: any, filename: string) => {
-  const uri = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(data))
-
-  saveAs(uri, filename)
-}
-
-export function saveAs(uri: string, filename: string) {
-
-  var link = document.createElement('a');
-
-  if (typeof link.download === 'string') {
-
-    link.href = uri;
-    link.download = filename;
-
-    //Firefox requires the link to be in the body
-    document.body.appendChild(link);
-
-    //simulate click
-    link.click();
-
-    //remove the link when done
-    document.body.removeChild(link);
-
-  } else {
-
-    window.open(uri);
-
-  }
 }
