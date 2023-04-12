@@ -41,9 +41,9 @@ export function usePokemon (params?: Params) {
     try {
       setIsLoading(true)
 
-      const { search, page = 0, limit = 0 } = params || {}
+      const { search, page = 0 } = params || {}
   
-      if (page >= limit || page <= 0) return;
+      if (page > _totalPages || page <= 0) return;
   
       const response = await pokemonService.findMany({
         limit: _limit,
