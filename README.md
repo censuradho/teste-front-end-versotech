@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center" width="150">
+  <img src="https://user-images.githubusercontent.com/49209628/231451663-a1eb26f5-2104-4517-b3fe-9a9d2d611eae.png" alt="logo" width="150" />
+</h1>
 
-## Getting Started
 
-First, run the development server:
+<p align="center">
+<img src="https://img.shields.io/github/last-commit/censuradho/teste-front-end-versotech?style=for-the-badge"/>&nbsp;&nbsp;&nbsp;
+<img src="https://img.shields.io/github/repo-size/censuradho/teste-front-end-versotech?style=for-the-badge"/>&nbsp;&nbsp;&nbsp;
+<img src="https://img.shields.io/github/languages/count/censuradho/teste-front-end-versotech?style=for-the-badge"/>
+</p>
+
+## 📃 Descrição do projeto
+
+Desafio técnico para a vaga de Front-end developer na [Versotech](https://github.com/somosversotech), trata-se de uma aplicação frontend de uma Pokedex, que é uma plataforma que permite a visualização e a busca por informações sobre os mais diversos tipos de Pokemon. Através da plataforma, é possível ter acesso a uma lista paginada completa de todos os Pokemon existentes, bem como informações detalhadas sobre cada um deles.
+
+A interface da aplicação é intuitiva e fácil de usar. A página inicial exibe uma lista com a imagem e o nome de cada Pokemon disponível. Há também um campo de busca que permite que o usuário encontre um Pokemon específico pelo nome ou pelo tipo.
+
+Ao clicar em um Pokemon específico, a aplicação redireciona o usuário para uma página com detalhes mais completos sobre ele. Nesta página, é possível ver uma imagem em alta resolução do Pokemon, além de informações sobre o tipo, habilidades, fraquezas e outras características.
+
+## ↗️ Links importantes
+- [Repositório com o desafio](https://github.com/somosversotech/teste-react-pleno)
+- [Preview da aplicação](https://teste-front-end-versotech.vercel.app/)
+
+
+## 📦 Setup
+
+### Pré-requisitos
+- [Node.js](https://nodejs.org/en)
+
+### Clone
+
+Clone o repositório na sua máquina local usando:
+
+```bash
+git clone https://github.com/censuradho/teste-front-end-versotech.git
+```
+
+### Instalando dependências
+
+```
+yarn
+```
+
+ou
+
+```bash
+ npm install
+```
+
+
+### Rodando o servidor de desenvolvimento
+
+
+```bash
+yarn dev
+```
+ou
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-[http://localhost:3000/api/hello](http://localhost:3000/api/hello) is an endpoint that uses [Route Handlers](https://beta.nextjs.org/docs/routing/route-handlers). This endpoint can be edited in `app/api/hello/route.ts`.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Se você abrir o broser na seguinte url [http://localhost:3000/](http://localhost:3000/), você deverá ver a página inicial da aplicação.
