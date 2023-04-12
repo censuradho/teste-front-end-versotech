@@ -79,8 +79,8 @@ export function usePokemon (params?: Params) {
       query: {
         ...query,
         limit
-      }
-    })
+      },
+    }, undefined, { shallow: true })
   }
 
   const handlePageChange = (page: number) => {
@@ -90,7 +90,7 @@ export function usePokemon (params?: Params) {
         ...query,
         page
       }
-    })
+    }, undefined, { shallow: true })
   }
 
   const handleSearch = (value: string) => {
@@ -100,7 +100,7 @@ export function usePokemon (params?: Params) {
         ...query,
         search: undefined
       },
-    })
+    }, undefined, { shallow: true })
   
     router.push({
       pathname: paths.home,
@@ -112,7 +112,7 @@ export function usePokemon (params?: Params) {
   }
 
   const handleResetFilters = () => {
-    router.push(router.pathname)
+    router.push(router.pathname, undefined, { shallow: true })
   }
 
   useEffect(() => {
