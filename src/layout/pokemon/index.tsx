@@ -52,35 +52,18 @@ export function PokemonLayout (props: PokemonPageProps) {
   return (
     <Styles.Container>
       <Container>
-        <Box fullWidth justifyContent="space-between" alignItems="flexStart">
-          <button onClick={onResetFilters}>
-            <Typography
-              as="h1"
-              size="xlg"
-              color="heading"
-            >Pokedex</Typography>
-          </button>
-          <Select
-            defaultValue={String(limit || 12)}
-            onValueChange={onChangeLimit}
-            label="Quantidade por página"
-            options={[
-              {
-                label: '12 itens',
-                value: 12,
-              },
-              {
-                label: '24 itens',
-                value: 24,
-              }
-            ]}
-          />
-        </Box>
+        <button onClick={onResetFilters}>
+          <Typography
+            as="h1"
+            size="xlg"
+            color="heading"
+          >Pokedex</Typography>
+        </button>
         <Styles.Form onSubmit={handleSubmit}>
           <Input
             label="Pesquisar"
             id="search"
-            placeholder="Nome, Tipo"
+            placeholder="nome ou tipo"
             value={querySearch}
             leftIcon={{
               name: 'search',
@@ -106,7 +89,22 @@ export function PokemonLayout (props: PokemonPageProps) {
             </Box>
           )}
         </Box>
-        <Box justifyContent="flex-end" marginTop={2}>
+        <Box justifyContent="space-between" marginTop={2} flexWrap="wrap" gap={1}>
+          <Select
+            defaultValue={String(limit || 12)}
+            onValueChange={onChangeLimit}
+            label="Quantidade por página"
+            options={[
+              {
+                label: '12 itens',
+                value: 12,
+              },
+              {
+                label: '24 itens',
+                value: 24,
+              }
+            ]}
+          />
           <Pagination 
             currentPage={page}
             totalPages={totalPages}
