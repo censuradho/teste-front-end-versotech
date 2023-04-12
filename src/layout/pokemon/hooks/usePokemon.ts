@@ -108,7 +108,7 @@ export function usePokemon (params?: Params) {
         ...query,
         search: value
       }
-    })
+    }, undefined, { shallow: true })
   }
 
   const handleResetFilters = () => {
