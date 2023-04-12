@@ -60,4 +60,4 @@ ou
 npm run dev
 ```
 
-Se você abrir o broser na seguinte url [http://localhost:3000/](http://localhost:3000/), você deverá ver a página inicial da aplicação.
+Se você abrir o broser na seguinte url [http://localhost:3000/](http://localhost:3000/), deverá ver a página inicial da aplicação.
