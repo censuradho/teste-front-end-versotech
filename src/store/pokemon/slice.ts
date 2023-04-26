@@ -2,7 +2,7 @@ import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { PokemonState } from "./types";
 import { Pokemon, PokemonFindManyResponse } from "@/services/pokeapi/pokemon/types";
 
-const initialState: PokemonState = {
+export const initialState: PokemonState = {
   pokemons: null
 }
 

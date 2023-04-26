@@ -3,11 +3,17 @@ import { Icon } from '@/components'
 import * as Styles from './styles'
 
 import { ButtonProps } from './types'
+import { PropsWithChildren } from 'react'
 
-export const Button = (props: ButtonProps) => {
-  const { children, icon, loading, disabled, type,  ...otherProps } =
-    props
-
+export const Button = (props: PropsWithChildren<ButtonProps>) => {
+  const { 
+    children, 
+    icon, 
+    loading, 
+    disabled, 
+    type,  
+    ...otherProps 
+  } = props
 
   return (
     <Styles.Button
@@ -16,7 +22,7 @@ export const Button = (props: ButtonProps) => {
       {...otherProps}
     >
       {icon && <Icon {...icon} />}
-      <span>{children}</span>
+      {children}
     </Styles.Button>
   )
 }

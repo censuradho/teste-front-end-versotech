@@ -1,4 +1,4 @@
-import { styled } from 'stitches.config'
+import { styled } from '@/stitches.config'
 import * as Tabs from '@radix-ui/react-tabs';
 
 export const Container = styled('div', {

@@ -1,4 +1,4 @@
-import { styled } from 'stitches.config'
+import { styled } from '@/stitches.config'
 import * as Select from '@radix-ui/react-select';
 
 export const Container = styled('div', {
