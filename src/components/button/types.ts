@@ -1,12 +1,9 @@
-import { LinkProps } from 'next/link'
 
-import { VariantProps } from '@stitches/react'
 import { Icon } from '@/components'
+import { VariantProps } from '@stitches/react'
 import {
-  ComponentProps,
   ButtonHTMLAttributes,
-  ReactNode,
-  AnchorHTMLAttributes
+  ComponentProps
 } from 'react'
 import { Button } from './styles'
 
@@ -18,7 +15,6 @@ type RootButtonProps = Pick<
 export interface ButtonProps
   extends VariantProps<typeof Button>,
     RootButtonProps {
-  children: ReactNode;
   icon?: ComponentProps<typeof Icon>;
   loading?: boolean;
 }

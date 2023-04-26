@@ -1,7 +1,7 @@
 import { fontSizes } from '@/constants/theme/fontSizes'
 import { colors } from '@/constants/theme'
 
-import { styled } from 'stitches.config'
+import { styled } from '@/stitches.config'
 import { parseToVariant } from '@/utils/helpers'
 
 

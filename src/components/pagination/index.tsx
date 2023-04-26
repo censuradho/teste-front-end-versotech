@@ -25,11 +25,11 @@ export function Pagination (props: PaginationProps) {
     const result = value + Number(currentPage)
     
     setPage(result)
-    onPageChange(result)
+    onPageChange?.(result)
   }
 
   const debouncePageChange = useDebounceCallback(value => {
-    onPageChange(value)
+    onPageChange?.(value)
   }, 500)
 
   useEffect(() => {
@@ -47,9 +47,11 @@ export function Pagination (props: PaginationProps) {
           {backward}
         </Styles.Bullet>
         <Styles.CurrentPageInput
+          type="text"
+          role="input"
+          name="page"
           min={1}
           max={_totalPages}
-          defaultValue={currentPage}
           value={page}
           onChange={(event) => {
             const { value } = event.target

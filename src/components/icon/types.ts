@@ -1,4 +1,4 @@
-import { theme } from "stitches.config";
+import { theme } from "@/stitches.config";
 import { icons } from "./icons";
 
 type Colors = typeof theme["colors"]
