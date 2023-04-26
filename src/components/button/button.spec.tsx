@@ -15,11 +15,14 @@ describe('Button Component', () => {
 
   it ('should be possible fire click event', () => {
     const label = 'Button'
-    const { getByText } = render(<Button>{label}</Button>)
+    const handleClick = jest.fn()
+
+    const { getByText } = render(<Button onClick={handleClick}>{label}</Button>)
 
     const component = getByText(label)
-
-    expect(userEvent.click(component)).toBeTruthy()
+    userEvent.click(component)
+    
+    expect(handleClick).toBeCalled()
   })
 
   it ('should be disabled when loading prop is true', () => {
