@@ -24,6 +24,8 @@ Ao clicar em um Pokemon específico, a aplicação redireciona o usuário para u
 
 ## 📦 Setup
 
+Todos os scripts abaixo devem ser executados a partir da pasta raiz do projeto.
+
 ### Pré-requisitos
 - [Node.js](https://nodejs.org/en)
 
